@@ -1,23 +1,23 @@
 name: Prettier and ESLint Checks
 
 on:
-    pull_request:
+  pull_request:
 
 jobs:
-    eslint-check:
-        runs-on: ubuntu-latest
+  eslint-check:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 18
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-            - name: Install dependencies
-              run: npm install
+      - name: Install dependencies
+        run: npm install
 
-            - name: Run Prettier and ESLint checks
-              run: npm run lint
+      - name: Run Prettier and ESLint checks
+        run: npm run lint
