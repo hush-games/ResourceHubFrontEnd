@@ -2,8 +2,18 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+nav {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: full;
+	top: 0;
+	background-color: antiquewhite;
+	box-shadow: inset 0 0 0 1px #000;
+}
+
 a {
 	color: #3b82f6;
 	text-decoration: none;
-	display: block;
+	margin-left: 2rem;
 }

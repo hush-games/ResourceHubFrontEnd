@@ -1,14 +1,17 @@
 <script lang="ts">
 	import '../app.css';
 
+	import AdminNav from '$lib/AdminNav.svelte';
+	import UserNav from '$lib/UserNav.svelte';
+
 	let { children } = $props();
-	const role = 'admin';
+	const role: string = 'user';
 </script>
 
 {#if role === 'admin'}
-	<h1>Admin Panel</h1>
+	<AdminNav />
 {:else if role === 'user'}
-	<h1>Admin User</h1>
+	<UserNav />
 {/if}
 
 {@render children()}
