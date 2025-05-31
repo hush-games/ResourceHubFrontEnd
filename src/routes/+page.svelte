@@ -2,10 +2,11 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+	let { profile } = $derived(data);
 </script>
 
 <h1>{data.message}</h1>
-<a href="/myresources">My Saved Resources</a>
+{#if profile}<a href="/myresources">My Saved Resources</a>{/if}
 <h1>Search for Resouces</h1>
 <br />
 <a href="/resources/resouceone">Resouce One</a>
