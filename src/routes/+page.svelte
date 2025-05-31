@@ -5,7 +5,6 @@
 	let { profile } = $derived(data);
 </script>
 
-<h1>{data.message}</h1>
 {#if profile}<a href="/myresources">My Saved Resources</a>{/if}
 <h1>Search for Resouces</h1>
 <br />
